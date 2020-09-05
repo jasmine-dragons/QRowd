@@ -16,7 +16,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/home')
-def index():
+def home():
     return render_template('index.html')
 
 @app.route('/scan/')
@@ -43,6 +43,10 @@ def scan_success():
 
     response = add_location(user_id, location_id)
     return render_template('scan_success.html', response=response)
+
+@app.route('/search')
+def search():
+    return render_template('search.html')
 
 if __name__ == '__main__':
     app.run()
