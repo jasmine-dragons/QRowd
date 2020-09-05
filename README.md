@@ -1,5 +1,5 @@
-# QRowd
-### The future of public health technology
+# QRowd ### The future of public health technology
+
 
 ## Inspiration
 
