@@ -3,7 +3,9 @@
 
 
 ## Inspiration
-As people start going out more and more everyday, trying to normalize their lives again, they find a huge need to be able to trace any establishment they have been in contact with. Going without contact tracing these days makes it extremely risky, both for one's own health and for one's family's health.
+As we slowly readjust to pre-pandemic life, it is essential to monitor the everyday interactions with others that may reinvigorate the Covid-19 virus. If we are not careful with the places we come and go, there is a great possibility that the pandemic will worsen. It is inevitable that the virus will spread without remembering where one came into contact with a Covid-19 positive individual.
+
+Contact tracing is a proven method to tackle Covid-19 at its source. By monitoring where individuals have been, both health officials and civilians can shut down infected locations before the virus spreads further. With citizens from all walks of life contributing to an crowd-source contact tracing application, new outbreaks can be suppressed easily.
 
 ## Functionality
 
