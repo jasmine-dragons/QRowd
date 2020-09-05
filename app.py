@@ -11,6 +11,10 @@ app = Flask(__name__)
 
 URI = os.getenv('ATLAS_URI')
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/scan/')
 def scan():
     location_id = request.args.get('location_id')
