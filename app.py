@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request
+from dotenv import load_dotenv
+import urllib.request, urllib.parse, urllib.error
+import http.client
+import json
 import os
 
 app = Flask(__name__)
-app.secret_key = b'\xa7\xaa(G=\xed\xc6\x7f\xc0\xdf\x93\x0c,P\x11\xf6\xb9I\x8b\r\xff3\xf7\xa5'
+app.secret_key = os.getenv(FLASK_KEY)
 
-URI = 'mongodb+srv://qrowd:applebanana@cluster0.cdr9x.mongodb.net/QRowd?retryWrites=true&w=majority'
-cipher = aes.AESCipher('E14mesLe679V90kN')
+URI = os.getenv(ATLAS_URI)
+cipher = aes.AESCipher(os.getenv(CIPHER_KEY))
 
 
 @app.route('/')
