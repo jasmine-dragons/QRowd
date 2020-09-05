@@ -44,11 +44,11 @@
               <div class="container">
                   <div class="hero-inner">
                     <div class="hero-copy">
-                      <h1 class="m-0">What's your user ID?</h1> </br>
+                      <h1 class="m-0">What's your User ID?</h1> </br>
                       <form action="/scan_success">
-                        <input type="text" id="user" name="user_id" placeholder="User ID"><br><br>
-                        <input type="text" name="location_id" value={{location_id}}><br><br>
-                        <button>submit</button>
+                        <input type="text" id="user" name="user_id" placeholder="User ID" style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border-radius: 25px"><br><br>
+                        <input type="text" name="location_id" value={{location_id}} style="width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box;border-radius: 25px;"><br><br>
+                        <button style="border-radius: 25px;width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box">Submit</button>
                       </form>
                     </div>
                   </div>
@@ -59,7 +59,7 @@
               <div class="container">
                   <div class="site-footer-inner">
                       <div class="brand footer-brand">
-  						<a href="#">
+  						<a href="{{url_for('home')}}">
   							<img class="header-logo-image" src="{{ url_for('static', filename='dist/images/logo.svg') }}" alt="Logo">
   						</a>
                       </div>
