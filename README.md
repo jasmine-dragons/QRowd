@@ -3,11 +3,11 @@
 
 ## Inspiration
 
-## What It Does
+## Functionality
 
-## How We Built It
+## Build Process
 
-## Challenges We Ran Into
+## Challenges
 
 ## Setup
 Your machine will need flask, pymongo, json, geocoder, mapbox, and dotenv to run this code. To get any of these libraries, you can just `pip install [insert library here]` in a terminal window. To run the code, first pull the github to your computer and then navigate to the folder where app.py is. Then open terminal and run the command `flask run`. This will direct you to a localhost website where you can interact with the product.
