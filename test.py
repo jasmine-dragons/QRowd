@@ -39,7 +39,8 @@ body = {
   "geometry": {
     "type": "Point",
     "coordinates": [
-        100, 0
+        -120.9545013359289,
+      38.357879132908636
     ]
   },
   "properties": {
