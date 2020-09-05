@@ -13,7 +13,7 @@ app = Flask(__name__)
 URI = os.getenv('ATLAS_URI')
 location_id = ''
 
-@app.route('/scan')
+@app.route('/scan/')
 def scan():
     location_id = request.args.get('location_id')
     return render_template('scan.html')
@@ -30,11 +30,12 @@ def scan_success():
         if user == None:
             response = user_id + ' was not found'
         else:
-            user.update({'user_id': user_id}, {'$push': {'locations': int(location_id)}})
+            my_col.update({'user_id': user_id}, {'$push': {'locations': location_id}})
             response = user_id + ' has been successfully updated'
         return response
 
     response = add_location(user_id, location_id)
+    print(location_id)
     return render_template('scan_success.html', response=response)
 
 if __name__ == '__main__':
