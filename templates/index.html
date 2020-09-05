@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>QRowd</title>
   </head>
-  <body>
-    <script name="location">
-      navigator.geolocation.getCurrentPosition(function(position) {
-        latitude = position.coords.latitude;
-        longitude = position.coords.longitude;
-        document.write(latitude + ', ' + longitude);
-      });
-    </script>
+  <body name="location">
+    <div>
+      <script>
+        navigator.geolocation.getCurrentPosition(function(position) {
+          latitude = position.coords.latitude;
+          longitude = position.coords.longitude;
+          document.write(latitude + ', ' + longitude);
+        });
+      </script>
+    </div>
   </body>
 </html>

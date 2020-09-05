@@ -4,22 +4,25 @@ import urllib.request, urllib.parse, urllib.error
 import http.client
 import json
 import os
+import aes
 
 
 app = Flask(__name__)
-app.secret_key = os.getenv(FLASK_KEY)
+app.secret_key = os.getenv('FLASK_KEY')
 
 
-URI = os.getenv(ATLAS_URI)
-cipher = aes.AESCipher(os.getenv(CIPHER_KEY))
+URI = os.getenv('ATLAS_URI')
+cipher = aes.AESCipher(os.getenv('CIPHER_KEY'))
 
 
 @app.route('/')
 def login():
-    return render_template('login.html', logged_in=session.get('logged_in'))
+    location = request.args.get('location')
+    print(location)
+    return render_template('index.html')
 
 
-@app.route('/login')
+'''@app.route('/login')
 def login():
     return render_template('login.html', logged_in=session.get('logged_in'))
 
@@ -96,6 +99,6 @@ def signup_success():
         response = 'email already registered'
         session['logged_in'] = False
         return render_template('signup_unsuccessful.html', response=response)
-
+'''
 if __name__ == '__main__':
     app.run()
