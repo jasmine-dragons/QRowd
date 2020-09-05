@@ -5,8 +5,10 @@ import http.client
 import json
 import os
 
+
 app = Flask(__name__)
 app.secret_key = os.getenv(FLASK_KEY)
+
 
 URI = os.getenv(ATLAS_URI)
 cipher = aes.AESCipher(os.getenv(CIPHER_KEY))
