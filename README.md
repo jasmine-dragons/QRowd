@@ -1,6 +1,6 @@
 # QRowd
 
-## Problem Description
+## Inspiration
 
 ## What It Does
 
