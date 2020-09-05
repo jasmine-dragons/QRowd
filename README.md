@@ -1,7 +1,9 @@
 # QRowd
-### The future of public health technology
+#### The future of public health technology
+
 
 ## Inspiration
+As people start going out more and more everyday, trying to normalize their lives again, they find a huge need to be able to trace any establishment they have been in contact with. Going without contact tracing these days makes it extremely risky, both for one's own health and for one's family's health.
 
 ## Functionality
 
