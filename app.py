@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 app.secret_key = b'\xa7\xaa(G=\xed\xc6\x7f\xc0\xdf\x93\x0c,P\x11\xf6\xb9I\x8b\r\xff3\xf7\xa5'
 
-URI = ''
+URI = 'mongodb+srv://qrowd:applebanana@cluster0.cdr9x.mongodb.net/QRowd?retryWrites=true&w=majority'
 cipher = aes.AESCipher('E14mesLe679V90kN')
 
 
