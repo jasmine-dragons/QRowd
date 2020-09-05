@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 import urllib.request, urllib.parse, urllib.error
 import http.client
-import geocoder
 import json
 import os
 
@@ -16,10 +15,44 @@ cipher = aes.AESCipher(os.getenv(CIPHER_KEY))
 
 
 @app.route('/')
-def index():
-    myloc = geocoder.ip('me')
-    print(myloc.latlng)
-    return render_template()
+def login():
+    return render_template('login.html', logged_in=session.get('logged_in'))
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html', logged_in=session.get('logged_in'))
+
+
+@app.route('/login_success')
+def login_success():
+    email = request.args.get('email')
+    password = request.args.get('password')
+
+    inputs = {
+        'email': email,
+        'password': password
+    }
+
+    def get_from_db(email, password):
+        my_client = pymongo.MongoClient(URI)
+        my_db = my_client['VHomes']
+        my_col = my_db['users']
+        user = my_col.find_one({'email': str(email)})
+        dec_pass = cipher.decrypt(str(user['password']))
+        if str(user['email']) == email and dec_pass == password:
+            return True
+        else:
+            return False
+
+    if get_from_db(email, password) == False:
+        response = 'incorrect username or password'
+        session['logged_in'] = False
+        return render_template('login_unsuccessful.html', response=response)
+    else:
+        response = 'logged in as ' + email
+        session['logged_in'] = True
+        return render_template('login_success.html', response=response)
 
 
 @app.route('/signup')
@@ -63,42 +96,6 @@ def signup_success():
         response = 'email already registered'
         session['logged_in'] = False
         return render_template('signup_unsuccessful.html', response=response)
-
-
-@app.route('/login')
-def login():
-    return render_template('login.html', logged_in=session.get('logged_in'))
-
-
-@app.route('/login_success')
-def login_success():
-    email = request.args.get('email')
-    password = request.args.get('password')
-
-    inputs = {
-        'email': email,
-        'password': password
-    }
-
-    def get_from_db(email, password):
-        my_client = pymongo.MongoClient(URI)
-        my_db = my_client['VHomes']
-        my_col = my_db['users']
-        user = my_col.find_one({'email': str(email)})
-        dec_pass = cipher.decrypt(str(user['password']))
-        if str(user['email']) == email and dec_pass == password:
-            return True
-        else:
-            return False
-
-    if get_from_db(email, password) == False:
-        response = 'incorrect username or password'
-        session['logged_in'] = False
-        return render_template('login_unsuccessful.html', response=response)
-    else:
-        response = 'logged in as ' + email
-        session['logged_in'] = True
-        return render_template('login_success.html', response=response)
 
 if __name__ == '__main__':
     app.run()

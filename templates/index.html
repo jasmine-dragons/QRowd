@@ -1,0 +1,16 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>QRowd</title>
+  </head>
+  <body>
+    <script name="location">
+      navigator.geolocation.getCurrentPosition(function(position) {
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+        document.write(latitude + ', ' + longitude);
+      });
+    </script>
+  </body>
+</html>
