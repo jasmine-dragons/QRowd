@@ -33,7 +33,7 @@
 						<div class="hero-copy">
 	                        <h1 class="hero-title mt-0">Contact tracing made simple</h1>
 	                        <p class="hero-paragraph">QRowd is the future of public health technology. </br>Sign up today to play your part in keeping the world safe from Covid-19.</p>
-	                        <div class="hero-cta"><a class="button button-primary" href="#">Start Now</a><a class="button" href="#">View Your Map</a></div>
+	                        <div class="hero-cta"><a class="button button-primary" href="{{ url_for('scan') }}">Start Now</a><a class="button" href="{{ url_for('search') }}">View Your Map</a></div>
 						</div>
 						<div class="hero-figure anime-element">
 							<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
@@ -72,7 +72,7 @@
                                     <div class="feature-icon">
 										<img src="static/dist/images/feature-icon-02.svg" alt="Feature 02">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
+                                    <h4 class="feature-title mt-24">Be Considerate</h4>
                                     <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                     <div class="feature-icon">
 										<img src="static/dist/images/feature-icon-03.svg" alt="Feature 03">
                                     </div>
-                                    <h4 class="feature-title mt-24">Be Productive</h4>
+                                    <h4 class="feature-title mt-24">Be Distanced</h4>
                                     <p class="text-sm mb-0">Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. A arcu cursus vitae congue mauris. Nam at lectus urna duis convallis. Mauris rhoncus aenean vel elit scelerisque mauris.</p>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@
                                         </ul>
                                     </div>
                                     <div class="pricing-table-cta mb-8">
-                                        <a class="button button-primary button-shadow button-block" href="#">Sign up now</a>
+                                        <a class="button button-primary button-shadow button-block" href="{{ url_for('scan') }}">Sign up now</a>
                                     </div>
                                 </div>
                             </div>
