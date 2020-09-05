@@ -5,7 +5,7 @@
 ## Inspiration
 As we slowly readjust to pre-pandemic life, it is essential to monitor the everyday interactions with others that may reinvigorate the Covid-19 virus. If we are not careful with the places we come and go, there is a great possibility that the pandemic will worsen. It is inevitable that the virus will spread without remembering where one came into contact with a Covid-19 positive individual. There is no doubt that we are all victims of the pandemic, indirect or direct. In order to return to a world without the hindrance of Covid-19, we must work together to prevent its further spread.
 
-Contact tracing is a proven method to tackle Covid-19 at its source. By monitoring where individuals have been, both health officials and civilians can shut down infected locations before the virus spreads further. With citizens from all walks of life contributing to an crowd-source contact tracing application, new outbreaks can be suppressed easily.
+Contact tracing is a proven method to tackle Covid-19 at its source. By monitoring where individuals have been, both health officials and civilians can shut down infected locations before the virus spreads further. With citizens from all walks of life contributing to an crowd-source contact tracing application, new outbreaks can be suppressed easily. Not only will civilians be able to avoid areas infected by Covid-19 with contact tracing technology, but small businesses can also use the technology to make informed decisions about their own operation. Crowd-sourced contact tracing made simple is the future of public health technology.
 
 ## Functionality
 
