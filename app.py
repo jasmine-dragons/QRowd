@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 import urllib.request, urllib.parse, urllib.error
 import http.client
+import requests
 import json
 import os
 import aes
@@ -15,12 +16,21 @@ URI = os.getenv('ATLAS_URI')
 cipher = aes.AESCipher(os.getenv('CIPHER_KEY'))
 
 
+URL = "https://geocode.search.hereapi.com/v1/geocode"
+location = input("Enter the location here: ")
+api_key = 'A5KBDur5Hp4Nok2YSD5pqg5I4rvZ1fDTMauWFD0feKM'
+PARAMS = {'apikey':api_key,'q':location}
+
+r = requests.get(url = URL, params = PARAMS)
+data = r.json()
+
+latitude = data['items'][0]['position']['lat']
+longitude = data['items'][0]['position']['lng']
+
+
 @app.route('/')
 def login():
-    lat = request.args.get('lat')
-    lon = request.args.get('lon')
-    print(lat)
-    return render_template('index.html')
+    return render_template('map.html',apikey=api_key,latitude=latitude,longitude=longitude)
 
 
 '''@app.route('/login')
