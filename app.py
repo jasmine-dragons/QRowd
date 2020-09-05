@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from dotenv import load_dotenv
 import urllib.request, urllib.parse, urllib.error
 import http.client
+import geocoder
 import json
 import os
 
@@ -16,6 +17,8 @@ cipher = aes.AESCipher(os.getenv(CIPHER_KEY))
 
 @app.route('/')
 def index():
+    myloc = geocoder.ip('me')
+    print(myloc.latlng)
     return render_template()
 
 
