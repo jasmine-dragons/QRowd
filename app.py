@@ -10,9 +10,9 @@ app = Flask(__name__)
 
 URI = os.getenv('ATLAS_URI')
 
-@app.route('/')
+@app.route('/track')
 def index():
-    user_id = request.args.get('page_number')
+    user_id = request.args.get('user_id')
     
     return render_template('index.html')
 
