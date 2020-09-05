@@ -14,7 +14,7 @@ URI = os.getenv('ATLAS_URI')
 location_id = ''
 
 
-
+@app.route('/')
 def scan():
     location_id = request.args.get('location_id')
     return render_template('index.html')
