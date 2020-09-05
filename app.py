@@ -17,8 +17,9 @@ cipher = aes.AESCipher(os.getenv('CIPHER_KEY'))
 
 @app.route('/')
 def login():
-    location = request.args.get('location')
-    print(location)
+    lat = request.args.get('lat')
+    lon = request.args.get('lon')
+    print(lat)
     return render_template('index.html')
 
 

@@ -1,18 +1,17 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>QRowd</title>
   </head>
-  <body name="location">
-    <div>
-      <script>
-        navigator.geolocation.getCurrentPosition(function(position) {
-          latitude = position.coords.latitude;
-          longitude = position.coords.longitude;
-          document.write(latitude + ', ' + longitude);
-        });
-      </script>
-    </div>
+  <body>
+    <script>
+      navigator.geolocation.getCurrentPosition(function(position) {
+        document.getElementById("lat").innerHTML = position.coords.latitude;
+        document.getElementById("lon").innerHTML = position.coords.longitude;
+      });
+    </script>
+    <div name="lat" id="lat"></div>
+    <div name="lon" id="lon"></div>
   </body>
 </html>
