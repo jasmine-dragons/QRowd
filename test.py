@@ -5,3 +5,6 @@ import http.client
 import geocoder
 import json
 import os
+
+
+MAPS_TOKEN = os.getenv('MAPS_TOKEN')
