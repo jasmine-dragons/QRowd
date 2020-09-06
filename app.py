@@ -54,9 +54,8 @@ def signup():
     return render_template('signup.html')
 
 @app.route('/signup_success')
-def signup():
+def signup_success():
     response = random.randint(0000, 9999)
-
     def in_db(user_id):
         my_client = pymongo.MongoClient(URI)
         my_db = my_client['QRowd']
@@ -67,9 +66,8 @@ def signup():
         else:
             return True
 
-    while in_db(response):
-        response = random.randint(0000, 9999)
 
+    print(in_db(response))
     return render_template('signup_success.html', response=response)
 
 if __name__ == '__main__':
