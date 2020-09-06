@@ -14,6 +14,7 @@ There are two primary use cases for QRowd: civilians and local businesses.
 After creating an account, users can immediately contribute to a worldwide contact tracing database. Now, every time a user visits a local business or public space, they can use their mobile device to scan the locations QR code. The user will then be prompted to enter their personal user ID. Using geocoding, the user's ID and location will be stored in a database for further reference. These locations are then used to populate an interactive contact tracing map, where a user can view the places they visited along with the times in which they were visited. Because the database is open-sourced, users can also use the map to view the activity at each location they visited, allowing them to determine whether or not they came into contact with a Covid-19 positive individual. However, because the only indentification used is a randomly generated ID, user data is not compromised, ensuring complete privacy and security.
 
 Local businesses can also take advantage of our platform by using it to make informed decisions about their own operation. Instead of creating a user account, local businesses simply request a QR code mapped to their location. Now, whenever a user scans the QR code, the local business will be notified, providing them with direct data regarding the customers and the places they may have come from. If a Covid-19 case is detected at the local business or at a location that one of their customers may have come from, the business may choose to shut down for a period of time, preventing the spread of the virus. Not only will this be beneficial for the business' brand and safety, but it will also protect their customers from falling victim to an infection.
+
 ![2.png](/static/images/Screenshots/3.png)
 
 ## Build Process
@@ -23,6 +24,7 @@ For the contact tracing map visualization feature (found in the map.html files) 
 
 ## Challenges
 The primary challenge that our team faced was the API connections needed for our data visualization feature. The first map API we used, MapBox, was extremely tough to use and led to extreme consequences in our code. Because most of the documentation was optimized for Javascript, it was difficult for us to create a http.client connection using Python. This caused us to have a hard time trying to implement the most important feature of the contact tracing app. Afterward, we tried to use the Google-Maps API via the gmplot library. However, it was difficult to find up to date documentation on the Python module, and as a result, we faced multiple circular import errors. Eventually, we were discovered Here API, which provided us with the map marking functionality that we needed.
+
 ![2.png](/static/images/Screenshots/2.png)
 
 ## What We Learned
