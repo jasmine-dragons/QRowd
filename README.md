@@ -35,7 +35,7 @@ ATLAS_URI={YOUR_ATLAS_URI_FROM_MONGODB}
 FLASK_KEY={YOUR_FLASK_KEY}
 ```
 
-### Detailed Instructions:
+## Detailed Instructions:
 1. Open command prompt
 2. Install flask, pymongo, dns, json, and bson using `pip install [library name]`
 3. Then download the github repo to your computer
@@ -44,3 +44,6 @@ FLASK_KEY={YOUR_FLASK_KEY}
 5. Then enter `flask run` in the command prompt
 6. Copy the localhost link that is outputted and paste it into a web browser
 7. Use the application in your browser
+
+## Website
+Click [here](https://qrowdapp.herokuapp.com/) to view the app for yourself!
