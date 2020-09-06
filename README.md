@@ -1,7 +1,7 @@
 # [QRowd](https://qrowdapp.herokuapp.com/)
 #### Crowd-sourced contact tracing powered by QR codes
 #### [Click here to visit the web-app](https://qrowdapp.herokuapp.com/)
-
+![Logo.png](/static/images/qrowdlogo.png)
 
 ## Inspiration
 As we slowly readjust to pre-pandemic life, it is essential to monitor the everyday interactions with others that may reinvigorate the Covid-19 virus. If we are not careful with the places we come and go, there is a great possibility that the pandemic will worsen. It is inevitable that the virus will spread without remembering where one came into contact with a Covid-19 positive individual. There is no doubt that we are all victims of the pandemic, indirect or direct. In order to return to a world without the hindrance of Covid-19, we must work together to prevent its further spread.
