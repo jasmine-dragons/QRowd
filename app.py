@@ -79,8 +79,25 @@ def signup_success():
 
 @app.route('/search')
 def search():
-    user_id = request.args.get('user_id')
     return render_template('search.html')
+
+@app.route('/map')
+def map():
+    user_id = request.args.get('user_id')
+
+    def get_location(location_id):
+        my_client = pymongo.MongoClient(URI)
+        my_db = my_client['QRowd']
+        my_col = my_db['locations']
+        location = my_col.find_one({'location_id': int(location_id)})
+        return location
+
+    lon = get_location(10)['longitude']
+    lat = get_location(10)['latitude']
+    lon1 = get_location(11)['longitude']
+    lat1 = get_location(11)['latitude']
+
+    return render_template('map.html', lon=lon, lat=lat, lon1=lon1, lat1=lat1)
 
 if __name__ == '__main__':
     app.run()
