@@ -1,5 +1,5 @@
 # [QRowd](https://qrowdapp.herokuapp.com/)
-#### *Crowd-sourced* contact tracing powered by QR codes
+#### *Crowd-sourced contact tracing powered by QR codes*
 #### [Live Demo](https://qrowdapp.herokuapp.com/)
 ![1.png](/static/images/Screenshots/1.png)
 
@@ -57,6 +57,9 @@ FLASK_KEY={YOUR_FLASK_KEY}
 
 ## What's Next for QRowd?
 With Covid-19 showing little evidence of concluding soon, we have many plans to improve this application in the future. First, we would like to create a mobile app, providing people with a more seamless interaction with our web application. This would tie into the integration of a camera, allowing people to efficiently scan a QR code without ever having to leave the comfort of their mobile device. This will also remove the extra step of typing in location and user ID codes, which is only necessary in desktop environment. Finally, we would like to integrate a population heatmap into our application to allow people to avoid populated and crowded locations, reducing the risk of infection. Ultimately, with data filtration features on each map visualization, both businesses and individuals will be able to make informed decisions regarding the state of the pandemic.
+
+## Youtube
+https://youtu.be/-5CyrjfUMAQ
 
 ## Website
 Click [here](https://qrowdapp.herokuapp.com/) to view the app for yourself!
