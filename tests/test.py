@@ -33,21 +33,16 @@ if not js:
 #print(js)
 
 
-feature_id = 1
+feature_id = '3aee9878de75607db4ebe53db9681a3b'
 type = 'Point'
 body = {
   "id": "01",
   "type": "Feature",
   "geometry": {
-    "type": "Polygon",
+    "type": "Point",
     "coordinates": [
-      [
-        [ 100, 0 ],
-        [ 101, 0 ],
-        [ 101, 1 ],
-        [ 100, 1 ],
-        [ 100, 0 ]
-      ]
+      -121.158035,
+      38.648559
     ]
   },
   "properties": {
@@ -62,29 +57,31 @@ print(resp.json())
 print("\n")
 
 # create another dataset
-req={
-  "name": "foo123",
-  "description": "bar123"
-}
+#req={
+  #"name": "foo123",
+#  "description": "bar123"
+#}
 #reqjosn = json.dumps(req)
 #resp = requests.post(requrl, data=reqjosn)
 #print(resp.json())
 
-# get all datasets
+# get a specific dataset
 geturl = "https://api.mapbox.com/datasets/v1/" + MAPS_USER + "/" + DATASET_ID + "?access_token=" + MAPS_TOKEN
 resp = requests.get(geturl)
 print(resp.json())
 print("\n")
 
-# get specific dataset
+# get specific dataset's features
 featurl = "https://api.mapbox.com/datasets/v1/" + MAPS_USER + "/" + DATASET_ID + "/features?access_token=" + MAPS_TOKEN
 resp = requests.get(featurl)
 print(resp.json())
 print("\n")
 
-# get features in specific dataset
-posturl = "https://api.mapbox.com/datasets/v1/" + MAPS_USER + "/" + DATASET_ID + "/features/" + str(feature_id) + "?access_token=" + MAPS_TOKEN
+# add features to a dataset
+posturl = "https://api.mapbox.com/datasets/v1/" + MAPS_USER + "/" + DATASET_ID + "/features/" + feature_id + "?access_token=" + MAPS_TOKEN
 resp = requests.post(posturl, data=body)
 print(resp.json())
+
+
 
 # add features to a datasets
