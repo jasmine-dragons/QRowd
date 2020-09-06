@@ -85,6 +85,13 @@ def search():
 def map():
     user_id = request.args.get('user_id')
 
+    def location_list(user_id):
+        my_client = pymongo.MongoClient(URI)
+        my_db = my_client['QRowd']
+        my_col = my_db['users']
+        user = my_col.find_one({'user_id': int(user_id)})
+        return user
+
     def get_location(location_id):
         my_client = pymongo.MongoClient(URI)
         my_db = my_client['QRowd']
@@ -92,12 +99,15 @@ def map():
         location = my_col.find_one({'location_id': int(location_id)})
         return location
 
-    lon = get_location(10)['longitude']
-    lat = get_location(10)['latitude']
-    lon1 = get_location(11)['longitude']
-    lat1 = get_location(11)['latitude']
+    locations = list(location_list(user_id)['locations'])
+    lon = []
+    lat = []
 
-    return render_template('map.html', lon=lon, lat=lat, lon1=lon1, lat1=lat1)
+    for location in loctions:
+        lon.append(get_location(int(location))['longitude'])
+        lat.append(get_location(int(location))['latitude'])
+
+    return render_template('map.html', lon=lon, lat=lat)
 
 if __name__ == '__main__':
     app.run()
