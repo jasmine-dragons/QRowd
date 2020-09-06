@@ -56,6 +56,7 @@ def signup():
 @app.route('/signup_success')
 def signup_success():
     response = random.randint(0000, 9999)
+
     def in_db(user_id):
         my_client = pymongo.MongoClient(URI)
         my_db = my_client['QRowd']
@@ -66,8 +67,18 @@ def signup_success():
         else:
             return True
 
+    def add_to_db(user_id):
+        my_client = pymongo.MongoClient(URI)
+        my_db = my_client['QRowd']
+        my_col = my_db['users']
+        user = my_col.insert_one({'user_id': int(user_id), 'locations': []})
 
-    print(in_db(response))
+    while True:
+        if in_db(response) == False:
+            add_to_db(response)
+            break
+        response = random.randint(0000, 9999)
+
     return render_template('signup_success.html', response=response)
 
 if __name__ == '__main__':
