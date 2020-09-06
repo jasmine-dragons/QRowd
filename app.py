@@ -5,6 +5,7 @@ import http.client
 import requests
 import pymongo
 import json
+import random
 import os
 
 app = Flask(__name__)
@@ -47,6 +48,29 @@ def scan_success():
 @app.route('/search')
 def search():
     return render_template('search.html')
+
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
+@app.route('/signup_success')
+def signup():
+    response = random.randint(0000, 9999)
+
+    def in_db(user_id):
+        my_client = pymongo.MongoClient(URI)
+        my_db = my_client['QRowd']
+        my_col = my_db['users']
+        user = my_col.find_one({'user_id': int(user_id)})
+        if user == None:
+            return False
+        else:
+            return True
+
+    while in_db(response):
+        response = random.randint(0000, 9999)
+
+    return render_template('signup_success.html', response=response)
 
 if __name__ == '__main__':
     app.run()
