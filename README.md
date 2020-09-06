@@ -28,6 +28,13 @@ Your machine will need flask, pymongo, json, geocoder, and dotenv to run this co
 
 You will also need to to set up a `.env` file that houses all the API-keys that are specific to you. This will make the data available for you to use from your own account. The API-keys that are written up here are for one of our accounts that houses the data for our own app.
 
+Copy the data below into the `.env` file and replace the information in the brackets with your API Keys and other data. 
+
+```
+ATLAS_URI={YOUR_ATLAS_URI_FROM_MONGODB}
+FLASK_KEY={YOUR_FLASK_KEY}
+```
+
 ### Detailed Instructions:
 1. Open command prompt
 2. Install flask, pymongo, dns, json, and bson using `pip install [library name]`
