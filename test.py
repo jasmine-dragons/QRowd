@@ -29,18 +29,24 @@ except:
 if not js:
     print('error')
 # 'https://api.mapbox.com/datasets/v1/nishantbalaji/ckeq2oto816oe28k48h74h0h8?access_token=' + MAPS_TOKEN
+print(js)
 
 
 feature_id = 1;
 type = 'Point'
 body = {
-  "id": "1",
+  "id": "01",
   "type": "Feature",
   "geometry": {
-    "type": "Point",
+    "type": "Polygon",
     "coordinates": [
-        -120.9545013359289,
-      38.357879132908636
+      [
+        [ 100, 0 ],
+        [ 101, 0 ],
+        [ 101, 1 ],
+        [ 100, 1 ],
+        [ 100, 0 ]
+      ]
     ]
   },
   "properties": {
@@ -55,7 +61,6 @@ response = conn.getresponse()
 print(response.status, response.reason)
 
 
-conn = http.client.HTTPSConnection('api.mapbox.com')
 conn.request('GET', '/datasets/v1/' + MAPS_USER + '/' + DATASET_ID + '/features?access_token=' + MAPS_TOKEN)
 # Decode UTF8 responses
 res = conn.getresponse()
