@@ -1,4 +1,4 @@
-# QRowd
+# [QRowd](https://qrowdapp.herokuapp.com/)
 #### Crowd-sourced contact tracing powered by QR codes
 
 
