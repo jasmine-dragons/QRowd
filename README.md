@@ -1,5 +1,4 @@
 # [QRowd](https://qrowdapp.herokuapp.com/)
-![Logo.png](/static/images/qrowdlogo.png)
 ![1.png](/static/images/Screenshots/1.png)
 ![2.png](/static/images/Screenshots/2.png)
 ![2.png](/static/images/Screenshots/3.png)
