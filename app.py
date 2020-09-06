@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-from dotenv import load_dotenv
 import urllib.request, urllib.parse, urllib.error
 import http.client
 import requests
@@ -10,7 +9,7 @@ import os
 
 app = Flask(__name__)
 
-URI = os.getenv('ATLAS_URI')
+URI = 'mongodb+srv://qrowd:applebanana@cluster0.cdr9x.mongodb.net/QRowd?retryWrites=true&w=majority'
 
 @app.route('/')
 def index():
@@ -103,7 +102,7 @@ def map():
     lon = []
     lat = []
 
-    for location in loctions:
+    for location in locations:
         lon.append(get_location(int(location))['longitude'])
         lat.append(get_location(int(location))['latitude'])
 
