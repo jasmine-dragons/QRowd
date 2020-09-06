@@ -20,10 +20,10 @@ We used a Flask back-end powered by a MongoDB database, in conjunction with an H
 For the contact tracing map visualization feature (found in the map.html files) we utilize...
 
 ## Challenges
-The primary challenge that our team faced was the API connections needed for our data visualization feature. Our first choice, the MapBox API, turned out to be much too difficult to master quickly. Trying to configure the backend to work with the API was extremely tought.
+The primary challenge that our team faced was the API connections needed for our data visualization feature.
 
 ## Setup
-Your machine will need flask, pymongo, json, geocoder, mapbox, and dotenv to run this code. To get any of these libraries, you can just `pip install [insert library here]` in a terminal window. To run the code, first pull the github to your computer and then navigate to the folder where app.py is. Then open terminal and run the command `flask run`. This will direct you to a localhost website where you can interact with the product.
+Your machine will need flask, pymongo, json, geocoder, and dotenv to run this code. To get any of these libraries, you can just `pip install [insert library here]` in a terminal window. To run the code, first pull the github to your computer and then navigate to the folder where app.py is. Then open terminal and run the command `flask run`. This will direct you to a localhost website where you can interact with the product.
 
 ### Detailed Instructions:
 1. Open command prompt
