@@ -103,7 +103,7 @@ def map():
     lon = []
     lat = []
 
-    for location in loctions:
+    for location in locations:
         lon.append(get_location(int(location))['longitude'])
         lat.append(get_location(int(location))['latitude'])
 
