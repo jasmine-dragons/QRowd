@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+
 import urllib.request, urllib.parse, urllib.error
 import http.client
 import requests
@@ -102,7 +103,7 @@ def map():
     lon = []
     lat = []
 
-    for location in locations:
+    for location in loctions:
         lon.append(get_location(int(location))['longitude'])
         lat.append(get_location(int(location))['latitude'])
 
