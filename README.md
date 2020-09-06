@@ -15,6 +15,9 @@ After creating an account, users can immediately contribute to a worldwide conta
 Local businesses can also take advantage of our platform by using it to make informed decisions about their own operation. Instead of creating a user account, local businesses simply request a QR code mapped to their location. Now, whenever a user scans the QR code, the local business will be notified, providing them with direct data regarding the customers and the places they may have come from. If a Covid-19 case is detected at the local business or at a location that one of their customers may have come from, the business may choose to shut down for a period of time, preventing the spread of the virus. Not only will this be beneficial for the business' brand and safety, but it will also protect their customers from falling victim to an infection.
 
 ## Build Process
+We used a Flask back-end powered by a MongoDB database, in conjunction with an HTML/CSS/Javascript front-end to build out QRowd. First, the web application framework was laid out by creating Flask routes corresponding to each page needed in the site on the app.py file. Within each route, we developed the needed back-end code. For example, within the scan route, which is where users are taken to upon scanning a QR code, contains a MongoDB URI connection that houses the user contact tracing database. After each scan, the corresponding location is appended to the list of locations under the user's ID number. The text input and success pages are implemented in the scan.html and scan_success.html pages, which utilize both CSS and Javascript to create an aesthetic UI/UX.
+
+For the contact tracing map visualization feature
 
 ## Challenges
 
