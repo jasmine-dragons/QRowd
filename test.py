@@ -61,10 +61,10 @@ response = conn.getresponse()
 print(response.status, response.reason)
 
 
-conn.request('GET', '/datasets/v1/' + MAPS_USER + '/' + DATASET_ID + '/features?access_token=' + MAPS_TOKEN)
+#conn.request('GET', '/datasets/v1/' + MAPS_USER + '/' + DATASET_ID + '/features?access_token=' + MAPS_TOKEN)
 # Decode UTF8 responses
-res = conn.getresponse()
-data = res.read().decode("utf-8")
+#res = conn.getresponse()
+#data = res.read().decode("utf-8")
 # Create JSON object from data
-js = json.loads(data)
-print(js)
+#js = json.loads(data)
+#print(js)
