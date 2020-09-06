@@ -20,7 +20,7 @@ We used a Flask back-end powered by a MongoDB database, in conjunction with an H
 For the contact tracing map visualization feature (found in the map.html files) we utilize...
 
 ## Challenges
-The primary challenge that our team faced was the API connections needed for our data visualization feature.
+The primary challenge that our team faced was the API connections needed for our data visualization feature. The first map API we used, MapBox, was extremely tough to use, and led to extreme consequences in our code. This caused us to have a hard time trying to implement the most important feature of the contact tracing app. Afterwards, we tried to use the Google-Maps API but we were deterred by the paywall. Finally, we were able to find the Here maps API and were able to make the API work.
 
 ## Setup
 Your machine will need flask, pymongo, json, geocoder, and dotenv to run this code. To get any of these libraries, you can just `pip install [insert library here]` in a terminal window. To run the code, first pull the github to your computer and then navigate to the folder where app.py is. Then open terminal and run the command `flask run`. This will direct you to a localhost website where you can interact with the product.
