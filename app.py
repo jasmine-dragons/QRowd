@@ -45,10 +45,6 @@ def scan_success():
     response = add_location(user_id, location_id)
     return render_template('scan_success.html', response=response)
 
-@app.route('/search')
-def search():
-    return render_template('search.html')
-
 @app.route('/signup')
 def signup():
     return render_template('signup.html')
@@ -80,6 +76,11 @@ def signup_success():
         response = random.randint(0000, 9999)
 
     return render_template('signup_success.html', response=response)
+
+@app.route('/search')
+def search():
+    user_id = request.args.get('user_id')
+    return render_template('search.html')
 
 if __name__ == '__main__':
     app.run()
