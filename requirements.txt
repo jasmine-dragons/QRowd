@@ -2,7 +2,5 @@ flask
 flask-heroku
 gunicorn
 pymongo
-json
-bson
 geocoder
 collective.geo.openlayers
