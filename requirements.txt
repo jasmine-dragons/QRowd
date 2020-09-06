@@ -5,5 +5,4 @@ pymongo
 json
 bson
 geocoder
-
-
+collective.geo.openlayers
