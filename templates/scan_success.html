@@ -14,21 +14,6 @@
 
 <body class="is-boxed has-animations">
     <div class="body-wrap">
-        <div class="hero-figure anime-element">
-            <svg class="placeholder" width="128" height="166" viewBox="0 0 128 166">
-                <rect width="528" height="196" style="fill:transparent;" />
-            </svg>
-            <div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
-            <div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
-            <div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
-            <div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
-            <div class="hero-figure-box hero-figure-box-05"></div>
-            <div class="hero-figure-box hero-figure-box-06"></div>
-            <div class="hero-figure-box hero-figure-box-07"></div>
-            <div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
-            <div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
-            <div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
-        </div>
         <header class="site-header">
             <div class="container">
                 <div class="site-header-inner">
@@ -43,20 +28,38 @@
             </div>
         </header>
 
-        <section class="hero">
+        <main>
+        <section class="hero" >
             <div class="container">
                 <div class="hero-inner">
                     <div class="hero-copy">
-                        <h1 class="m-0">{{response}}</h1> </br>
-                        <form action="/scan">
-                            <button
-                                style="border-radius: 25px;width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box; background-color:#0270D7; color:#fff;">Return to Home</button>
-                        </form>
+                        <div class="hero-copy">
+                            <h1 class="m-0">{{response}}</h1> </br>
+                            <form action="/home">
+                                <button
+                                    style="border-radius: 25px;width: 100%;padding: 12px 20px;margin: 8px 0;box-sizing: border-box; background-color:#0270D7; color:#fff;">Return to Home</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="hero-figure anime-element">
+                        <svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
+                            <rect width="528" height="396" style="fill:transparent;" />
+                        </svg>
+                        <div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
+                        <div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
+                        <div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
+                        <div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
+                        <div class="hero-figure-box hero-figure-box-05"></div>
+                        <div class="hero-figure-box hero-figure-box-06"></div>
+                        <div class="hero-figure-box hero-figure-box-07"></div>
+                        <div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
+                        <div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
+                        <div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
                     </div>
                 </div>
             </div>
         </section>
-
+        </main>
         <footer class="site-footer">
             <div class="container">
                 <div class="site-footer-inner">
