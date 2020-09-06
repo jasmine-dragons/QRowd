@@ -1,35 +1,51 @@
 <html>
   <head>
-  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
-  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+    type="text/javascript" charset="utf-8"></script>
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+    type="text/javascript" charset="utf-8"></script>
   </head>
-  <body style='margin: 0'>
-  <div style="width: 100vw; height: 100vh" id="mapContainer"></div>
-  <script>
-    // Initialize the platform object:
-    var platform = new H.service.Platform({
-    'apikey': '{{apikey}}'
-    });
+  <body>
+    <div style="width: 640px; height: 480px" id="mapContainer"></div>
+    <script>
+      // Initialize the platform object:
+      var platform = new H.service.Platform({
+        'apikey': 'A5KBDur5Hp4Nok2YSD5pqg5I4rvZ1fDTMauWFD0feKM'
+      });
 
-	const lng = {{longitude}};
-	const lat = {{latitude}};
+      // Obtain the default map types from the platform object
+      var maptypes = platform.createDefaultLayers();
 
-// Obtain the default map types from the platform object
-	var defaultLayers = platform.createDefaultLayers();
+      // Instantiate (and display) a map object:
+      var map = new H.Map(
+        document.getElementById('mapContainer'),
+        maptypes.vector.normal.map,
+        {
+          zoom: 10,
+          center: { lng: 48.9, lat: 2.3 }
+        });
+        // Define a variable holding SVG mark-up that defines an icon image:
+      var svgMarkup = '<svg width="24" height="24" ' +
+          'xmlns="http://www.w3.org/2000/svg">' +
+          '<rect stroke="white" fill="#1b468d" x="1" y="1" width="22" ' +
+          'height="22" /><text x="12" y="18" font-size="12pt" ' +
+          'font-family="Arial" font-weight="bold" text-anchor="middle" ' +
+          'fill="white">H</text></svg>';
 
-// Instantiate (and display) a map object:
-var map = new H.Map(
-    document.getElementById('mapContainer'),
-    defaultLayers.vector.normal.map,
-    {
-      zoom: 10,
-      center: { lat: lat, lng: lng }
-    });
+      // Create an icon, an object holding the latitude and longitude, and a marker:
+      var icon = new H.map.Icon(svgMarkup),
+          coords = {lat: {{lat}}, lng: {{lon}}},
+          marker = new H.map.Marker(coords, {icon: icon});
 
-	const marker = new H.map.Marker({lat: lat, lng: lng});
-	map.addObject(marker);
-  </script>
+      map.addObject(marker);
+
+      var icon1 = new H.map.Icon(svgMarkup),
+          coords = {lat: {{lat1}}, lng: {{lon1}}},
+          marker1 = new H.map.Marker(coords, {icon: icon});
+
+      map.addObject(marker1);
+      map.setCenter(coords);
+    </script>
   </body>
 </html>
-

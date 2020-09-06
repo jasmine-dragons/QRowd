@@ -84,6 +84,7 @@ def search():
 @app.route('/map')
 def map():
     user_id = request.args.get('user_id')
+    
 
     def get_location(location_id):
         my_client = pymongo.MongoClient(URI)
