@@ -1,5 +1,6 @@
 # [QRowd](https://qrowdapp.herokuapp.com/)
 #### Crowd-sourced contact tracing powered by QR codes
+#### [Click here to visit the web-app](https://qrowdapp.herokuapp.com/)
 
 
 ## Inspiration
