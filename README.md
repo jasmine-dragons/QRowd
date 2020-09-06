@@ -17,7 +17,7 @@ Local businesses can also take advantage of our platform by using it to make inf
 ## Build Process
 We used a Flask back-end powered by a MongoDB database, in conjunction with an HTML/CSS/Javascript front-end to build out QRowd. First, the web application framework was laid out by creating Flask routes corresponding to each page needed in the site on the app.py file. Within each route, we developed the needed back-end code. For example, within the scan route, which is where users are taken to upon scanning a QR code, contains a MongoDB URI connection that houses the user contact tracing database. After each scan, the corresponding location is appended to the list of locations under the user's ID number. The text input and success pages are implemented in the scan.html and scan_success.html pages, which utilize both CSS and Javascript to create an aesthetic UI/UX.
 
-For the contact tracing map visualization feature
+For the contact tracing map visualization feature (found in the map.html files) we utilize...
 
 ## Challenges
 
