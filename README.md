@@ -1,5 +1,5 @@
-![Logo.png](/static/images/qrowdlogo.png)
 # [QRowd](https://qrowdapp.herokuapp.com/)
+![Logo.png](/static/images/qrowdlogo.png)
 #### Crowd-sourced contact tracing powered by QR codes
 #### [Click here to visit the web-app](https://qrowdapp.herokuapp.com/)
 
