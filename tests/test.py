@@ -55,11 +55,13 @@ body = {
   }
 }
 
-
-createurl = "https://api.mapbox.com/datasets/v1/pdaggubati?access_token=sk.eyJ1IjoicGRhZ2d1YmF0aSIsImEiOiJja2VxaGJsNjIxYXMzMnJvOXQydWFmbXVlIn0.QsUGLbFfcjNdd387-lCGRA"
+# ????
+createurl = "https://api.mapbox.com/datasets/v1/" + MAPS_USER + "?access_token=" + MAPS_TOKEN
 resp = requests.get(createurl)
 print(resp.json())
 print("\n")
+
+# create another dataset
 req={
   "name": "foo123",
   "description": "bar123"
@@ -68,19 +70,21 @@ req={
 #resp = requests.post(requrl, data=reqjosn)
 #print(resp.json())
 
-geturl = "https://api.mapbox.com/datasets/v1/pdaggubati/ckeqhoa9g25dw22qb3vlzcu4l?access_token=sk.eyJ1IjoicGRhZ2d1YmF0aSIsImEiOiJja2VxaGJsNjIxYXMzMnJvOXQydWFmbXVlIn0.QsUGLbFfcjNdd387-lCGRA"
+# get all datasets
+geturl = "https://api.mapbox.com/datasets/v1/" + MAPS_USER + "/" + DATASET_ID + "?access_token=" + MAPS_TOKEN
 resp = requests.get(geturl)
 print(resp.json())
 print("\n")
 
-featurl = "https://api.mapbox.com//datasets/v1/pdaggubati/ckeqhoa9g25dw22qb3vlzcu4l/features?access_token=sk.eyJ1IjoicGRhZ2d1YmF0aSIsImEiOiJja2VxaGJsNjIxYXMzMnJvOXQydWFmbXVlIn0.QsUGLbFfcjNdd387-lCGRA"
+# get specific dataset
+featurl = "https://api.mapbox.com/datasets/v1/" + MAPS_USER + "/" + DATASET_ID + "/features?access_token=" + MAPS_TOKEN
 resp = requests.get(featurl)
 print(resp.json())
 print("\n")
 
-
-
-'''posturl = "https://api.mapbox.com/datasets/v1/pdaggubati/ckeqhoa9g25dw22qb3vlzcu4l/features/1?access_token=sk.eyJ1IjoicGRhZ2d1YmF0aSIsImEiOiJja2VxaGJsNjIxYXMzMnJvOXQydWFmbXVlIn0.QsUGLbFfcjNdd387-lCGRA"
+# get features in specific dataset
+posturl = "https://api.mapbox.com/datasets/v1/" + MAPS_USER + "/" + DATASET_ID + "/features/" + str(feature_id) + "?access_token=" + MAPS_TOKEN
 resp = requests.post(posturl, data=body)
 print(resp.json())
-'''
+
+# add features to a datasets
