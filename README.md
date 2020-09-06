@@ -22,8 +22,13 @@ We used a Flask back-end powered by a MongoDB database, in conjunction with an H
 For the contact tracing map visualization feature (found in the map.html files) we utilize the Here API. After each scan, the corresponding location is appended to the list of locations under the user's ID number. This data is then accessed by the “map” route, where the location_list method retrieves the location_ids corresponding to a particular user, and the get_location method returns the longitude and latitude for each location. The frontend code is home to the data visualization component, which uses Here API to provide a live-feed contact tracing map that marks each user’s past locations. Using the MongoDB data from the Flask backend, we use Javascript to output a map containing markers on the user’s locations Finally, the HTML brings the rest of the front end together, creating an aesthetic, bootstrapped user interface.
 
 ## Challenges
-The primary challenge that our team faced was the API connections needed for our data visualization feature. The first map API we used, MapBox, was extremely tough to use, and led to extreme consequences in our code. This caused us to have a hard time trying to implement the most important feature of the contact tracing app. Afterwards, we tried to use the Google-Maps API but we were deterred by the paywall. Finally, we were able to find the Here maps API and were able to make the API work.
+The primary challenge that our team faced was the API connections needed for our data visualization feature. The first map API we used, MapBox, was extremely tough to use and led to extreme consequences in our code. Because most of the documentation was optimized for Javascript, it was difficult for us to create a http.client connection using Python. This caused us to have a hard time trying to implement the most important feature of the contact tracing app. Afterward, we tried to use the Google-Maps API via the gmplot library. However, it was difficult to find up to date documentation on the Python module, and as a result, we faced multiple circular import errors. Eventually, we were discovered Here API, which provided us with the map marking functionality that we needed.
 ![2.png](/static/images/Screenshots/2.png)
+
+## What We Learned
+Throughout the course of this project, we learned how to use map APIs to create a semi-real-time updating interface that shows locations that have been visited. We also learned how to create an interface with multiple NoSQL database collections to build a reusable and scalable web application. Moreover, we honed in on full-stack development techniques using Flask, allowing us to discover more about the framework behind a fully functional web application. Not only did we sharpen our technical skills, but QRowd also taught us many intangible skills, including contact tracing and other methods of combatting a pandemic.
+
+We hope to continue learning more about the technical and social aspects of efficient contact tracing. During pandemics, it is important for people to have a grasp of their own health and welfare. As we prepare for the future, QRowd will help us continue playing our role in the fight against Covid-19.
 
 ## Setup
 Your machine will need flask, pymongo, json, geocoder, and dotenv to run this code. To get any of these libraries, you can just `pip install [insert library here]` in a terminal window. To run the code, first pull the github to your computer and then navigate to the folder where app.py is. Then open terminal and run the command `flask run`. This will direct you to a localhost website where you can interact with the product.
@@ -46,6 +51,10 @@ FLASK_KEY={YOUR_FLASK_KEY}
 5. Then enter `flask run` in the command prompt
 6. Copy the localhost link that is outputted and paste it into a web browser
 7. Use the application in your browser
+
+
+## What's Next for QRowd?
+With Covid-19 showing little evidence of concluding soon, we have many plans to improve this application in the future. First, we would like to create a mobile app, providing people with a more seamless interaction with our web application. This would tie into the integration of a camera, allowing people to efficiently scan a QR code without ever having to leave the comfort of their mobile device. This will also remove the extra step of typing in location and user ID codes, which is only necessary in desktop environment. Finally, we would like to integrate a population heatmap into our application to allow people to avoid populated and crowded locations, reducing the risk of infection. Ultimately, with data filtration features on each map visualization, both businesses and individuals will be able to make informed decisions regarding the state of the pandemic.
 
 ## Website
 Click [here](https://qrowdapp.herokuapp.com/) to view the app for yourself!
