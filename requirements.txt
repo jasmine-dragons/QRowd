@@ -4,4 +4,5 @@ gunicorn
 pymongo
 geocoder
 collective.geo.openlayers
-here
+dnspython
+pymongo[srv]
