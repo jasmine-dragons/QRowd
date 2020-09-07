@@ -32,7 +32,7 @@ Throughout the course of this project, we learned how to use map APIs to create 
 
 We hope to continue learning more about the technical and social aspects of efficient contact tracing. During pandemics, it is important for people to have a grasp of their own health and welfare. As we prepare for the future, QRowd will help us continue playing our role in the fight against Covid-19.
 
-## Setup
+## Requirements
 Your machine will need flask, pymongo, json, geocoder, and dotenv to run this code. To get any of these libraries, you can just `pip install [insert library here]` in a terminal window. To run the code, first pull the github to your computer and then navigate to the folder where app.py is. Then open terminal and run the command `flask run`. This will direct you to a localhost website where you can interact with the product.
 
 You will also need to to set up a `.env` file that houses all the API-keys that are specific to you. This will make the data available for you to use from your own account. The API-keys that are written up here are for one of our accounts that houses the data for our own app.
@@ -44,7 +44,7 @@ ATLAS_URI={YOUR_ATLAS_URI_FROM_MONGODB}
 FLASK_KEY={YOUR_FLASK_KEY}
 ```
 
-## Detailed Instructions:
+## Setup:
 1. Open command prompt
 2. Install flask, pymongo, dns, json, and bson using `pip install [library name]`
 3. Then download the github repo to your computer
