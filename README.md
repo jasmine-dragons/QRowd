@@ -11,7 +11,7 @@ Contact tracing is a proven method to tackle Covid-19 at its source. By monitori
 ## Functionality
 There are two primary use cases for QRowd: civilians and local businesses.
 
-After creating an account, users can immediately contribute to a worldwide contact tracing database. Now, every time a user visits a local business or public space, they can use their mobile device to scan the locations QR code. The user will then be prompted to enter their personal user ID. Using geocoding, the user's ID and location will be stored in a database for further reference. These locations are then used to populate an interactive contact tracing map, where a user can view the places they visited along with the times in which they were visited. Because the database is open-sourced, users can also use the map to view the activity at each location they visited, allowing them to determine whether or not they came into contact with a Covid-19 positive individual. However, because the only indentification used is a randomly generated ID, user data is not compromised, ensuring complete privacy and security.
+After creating an account, users can immediately contribute to a worldwide contact tracing database. Now, every time a user visits a local business or public space, they can use their mobile device to scan the locations QR code. The user will then be prompted to enter their personal user ID. Using geocoding, the user's ID and location will be stored in a database for further reference. These locations are then used to populate an interactive contact tracing map, where a user can view the places they visited along with the times in which they were visited. Because the database is open-sourced, users can also use the map to view the activity at each location they visited, allowing them to determine whether or not they came into contact with a Covid-19 positive individual. However, because the only identification used is a randomly generated ID, user data is not compromised, ensuring complete privacy and security.
 
 Local businesses can also take advantage of our platform by using it to make informed decisions about their own operation. Instead of creating a user account, local businesses simply request a QR code mapped to their location. Now, whenever a user scans the QR code, the local business will be notified, providing them with direct data regarding the customers and the places they may have come from. If a Covid-19 case is detected at the local business or at a location that one of their customers may have come from, the business may choose to shut down for a period of time, preventing the spread of the virus. Not only will this be beneficial for the business' brand and safety, but it will also protect their customers from falling victim to an infection.
 
@@ -37,7 +37,7 @@ Your machine will need flask, pymongo, json, geocoder, and dotenv to run this co
 
 You will also need to to set up a `.env` file that houses all the API-keys that are specific to you. This will make the data available for you to use from your own account. The API-keys that are written up here are for one of our accounts that houses the data for our own app.
 
-Copy the data below into the `.env` file and replace the information in the brackets with your API Keys and other data. 
+Copy the data below into the `.env` file and replace the information in the brackets with your API Keys and other data. See .env.sample for details.
 
 ```
 ATLAS_URI={YOUR_ATLAS_URI_FROM_MONGODB}
